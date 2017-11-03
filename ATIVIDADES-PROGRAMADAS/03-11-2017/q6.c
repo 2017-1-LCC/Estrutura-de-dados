@@ -20,6 +20,7 @@ typedef struct {
 } Produto;
 
 void inserirProduto(Produto *listaProduto, int tam);
+void buscaPorCodigo(Produto *listaProduto, int tam);
 
 main() {
 	setlocale(LC_ALL,"portuguese_Brazil");
