@@ -5,6 +5,10 @@ DATA DA AULA : 03/11/2017
 DATA DA ENTREGA : 09/11/2017
 ENVIAR P/ : honoratonunes@gmail.com
 
+GIST : https://gist.github.com/hc3/83876f4a6efdec078214b5e0e13a4a85
+VETOR de Struct : https://programacaodescomplicada.wordpress.com/2012/08/31/aula-37-arrays-de-structs/
+
+
 Escrever um programa que cadastre o nome, a matrÃ­cula e duas notas
 de vÃ¡rios alunos. Em seguida imprima a matrÃ­cula, o nome e a mÃ©dia de
 cada um deles.
@@ -13,7 +17,7 @@ cada um deles.
 #include <stdio.h>
 #include <locale.h>
 
-/* STRUCT com as informações do Aluno */
+/* STRUCT com as informaï¿½ï¿½es do Aluno */
 typedef struct {
     char nome[20];
     int matricula;
@@ -22,7 +26,7 @@ typedef struct {
 } Aluno;
 
 
-/* DECLARAÇÃO DOS MÉTODOS */
+/* DECLARAï¿½ï¿½O DOS Mï¿½TODOS */
 void insertAndPrintInfoAlunos( Aluno *vetorAluno, int tamanho);
 
 main() {
@@ -34,18 +38,18 @@ main() {
 }
 
 /*
-função que insere e mostra os dados do aluno
+funï¿½ï¿½o que insere e mostra os dados do aluno
 */
 void insertAndPrintInfoAlunos( Aluno *vetorAluno, int tamanho) {
     int num;
     float avrg;
     
 	/* 
-		um for que acessa cada posição no vetor de Alunos e através do . ( ponto ) da pra acessar a propriedade
+		um for que acessa cada posiï¿½ï¿½o no vetor de Alunos e atravï¿½s do . ( ponto ) da pra acessar a propriedade
 		do struct, exemplo : vetor[num].nome
 	*/	
     for(num = 0; num < tamanho; num++)  {
-    	printf("###  PREENCHENDO INFORMAÇÕES DO %dº ALUNO ### \n\n",num+1);
+    	printf("###  PREENCHENDO INFORMAï¿½ï¿½ES DO %dï¿½ ALUNO ### \n\n",num+1);
         printf("Digite o nome do aluno: ");
         scanf("%s",vetorAluno[num].nome);
         printf("Digite a matricula do aluno: ");
@@ -59,13 +63,13 @@ void insertAndPrintInfoAlunos( Aluno *vetorAluno, int tamanho) {
     }
 	
 	/* 
-		vetor que mostra as informações 
+		vetor que mostra as informaï¿½ï¿½es 
 	*/
     for(num = 0; num < tamanho; num++)  {
-    	printf("###  EXIBINDO INFORMAÇÕES DO DO %dº ALUNO ### \n\n",num+1);
+    	printf("###  EXIBINDO INFORMAï¿½ï¿½ES DO DO %dï¿½ ALUNO ### \n\n",num+1);
         printf("Matricula : %d \n",vetorAluno[num].matricula);
         printf("Nome : %s \n",vetorAluno[num].nome);
-        // PROCESSAMENTO PARA EXIBIR A MÉDIA 
+        // PROCESSAMENTO PARA EXIBIR A Mï¿½DIA 
         printf("Media : %f \n",(vetorAluno[num].primeiraNota + vetorAluno[num].segundaNota) / 2);
         printf("### --            ==================           --##");
         printf("\n\n\n");
