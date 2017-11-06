@@ -48,7 +48,7 @@ void orderPeople(People *peopleList, int tam) {
     int lin, col, num;
 	   
     for(lin = 0; lin < tam; lin++) {	
-    	for(col = lin; col < tam; col++) {s
+    	for(col = lin; col < tam; col++) {
     		if(strcmp(peopleList[lin].name, peopleList[col].name) > 0) {
 				temp = peopleList[lin];
 				peopleList[lin] = peopleList[col];
