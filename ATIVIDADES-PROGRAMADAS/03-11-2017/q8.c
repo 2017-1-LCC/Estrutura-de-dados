@@ -66,7 +66,7 @@ main() {
 			scanf("%d",&qntPeople);
 			if(qntPeople > 10) {
 				while(qntPeople > 10) {
-					printf("O numero maximo de clientes é 10 \n");
+					printf("O numero maximo de clientes ï¿½ 10 \n");
 					scanf("%d",&qntPeople);
 					if(qntPeople <= 10) {
 						insertPeopleOnBookingSchedule(&schedule, qntPeople);
