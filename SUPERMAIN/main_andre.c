@@ -1,3 +1,5 @@
+// por hora só o menu
+
 #include <stdio.h>
 
 int menu();
