@@ -76,7 +76,7 @@ void removeElementOnFinal(nameStruct *object) {
 		object->qtdElements--;
 	}
 }
-
+//asdasd
 void showAllElements(nameStruct *object) {
 	int tam;
 	if(object->qtdElements == 0) {
