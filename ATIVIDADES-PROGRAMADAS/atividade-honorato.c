@@ -170,7 +170,23 @@ void findMatriculaOnList(nameStruct *object) {
 
 //08 - Ordenar a lista
 void orderList(nameStruct *object) {
-
+    People temp;
+    int lin, col, num;
+	   
+    for(lin = 0; lin < object->qtdElements; lin++) {	
+    	for(col = lin; col < qtdElements; col++) {
+    		if(object->matricula[lin] > object->matricula[col]) {
+				temp = object[lin];
+				object[lin] = object[col];
+				object[col] = temp;
+			}
+		}
+	}
+    
+    for(num = 0; num < tam; num++) {
+		printf("%s \n",object[num->name);
+		printf("%s \n",object[num->matricula);
+    }
 }
 
 
