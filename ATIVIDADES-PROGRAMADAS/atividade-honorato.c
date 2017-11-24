@@ -1,7 +1,7 @@
 /*
-ATIVIDADE 
+ATIVIDADE
 
-struct objeto { 
+struct objeto {
 	int qntElements;
 	int matricula[m];
 	float nota[m];
@@ -30,7 +30,7 @@ struct objeto {
 #define false 1
 #define TAM_LIST 10
 
-// DECLARAR STRUCT 
+// DECLARAR STRUCT
 typedef struct {
 	int qtdElements;
 	char matricula[TAM_LIST];
@@ -46,6 +46,7 @@ void removeElementOnFinal(nameStruct *object);
 void showAllElements(nameStruct *object);
 void orderList(nameStruct *object);
 void acessElementOnList(nameStruct *object);
+void countQtdElementsOnList(nameStruct *object);
 int menu();
 void exit();
 
@@ -62,22 +63,18 @@ void startList(nameStruct *object) {
 	object->qtdElements = 0;
 }
 
-void countQtdElementsOnList(nameStruct *object) {
-
-}
-
-// 01 - Inserir no final da lista 
+// 01 - Inserir no final da lista
 void insertElementOnFinal(nameStruct *object) {
 
     system("clear");
 
 	char atributo;
-	
+
 	if(object->qtdElements > TAM_LIST - 1) {
 		printf("ERROR 489 - LIST IS FULL!");
 	} else {
 		printf("Digite o novo elemento da lista: ");
-		scanf(" %c",&atributo);	
+		scanf(" %c",&atributo);
 		object->atributo[object->qtdElements] = atributo;
 		object->qtdElements++;
 		printf("elemento [ --> %c] inserido com sucesso! \n",atributo);
@@ -85,7 +82,9 @@ void insertElementOnFinal(nameStruct *object) {
 }
 
 // 02 - Determinar o número de nós de uma lista
-
+void countQtdElementsOnList(nameStruct *object) {
+    printf("Elementos na lista: %d",object->qtdElements);
+}
 
 
 // 03 - Localizar o nó que contém uma determinada matricula
@@ -106,9 +105,9 @@ void findMatriculaOnList(nameStruct *object) {
             if(matricula == object->matricula[tam]) {
                 printf("Matricula %d encontrada com a nota %f",object->matricula[tam], object->nota[tam]);
             }
-            
+
         }
-    } 
+    }
 }
 
 //04 - Mostrar o valor de um determinado nó
@@ -119,7 +118,7 @@ void acessElementOnList(nameStruct *object) {
 	int position;
 	printf("Informe a posicao: ");
 	scanf("%d",&position);
-	
+
 	if(position < 0 || position > object->qtdElements || object->qtdElements > TAM_LIST - 1) {
 		printf("ERROR 586 - POSITION NOT EXIST IN LIST");
 	} else {
@@ -162,7 +161,7 @@ void findMatriculaOnList(nameStruct *object) {
             }
         }
         printf("A Maior nota e %f a matricula %d",maiorNota, maiorMatricula);
-    } 
+    }
 }
 
 
@@ -171,7 +170,7 @@ void findMatriculaOnList(nameStruct *object) {
 
 //08 - Ordenar a lista
 void orderList(nameStruct *object) {
-    
+
 }
 
 
@@ -199,7 +198,7 @@ void showAllElements(nameStruct *object) {
 
 
 void exit() {
-	
+
 }
 
 
@@ -207,7 +206,7 @@ int menu() {
 
 	nameStruct objeto;
 	startList(&objeto);
-	
+
   int op = -1;
   while (op != 0) {
         printf("\n#########################################################");
@@ -227,34 +226,34 @@ int menu() {
         printf("\n|-------------------------------------------------------|\n");
 
         scanf(" %d", &op);
-        
+
         switch (op) {
             case 1:
                 insertElementOnFinal(&objeto);
                 break;
             case 2:
-                
+                cou
                 break;
             case 3:
-                
+
                 break;
             case 4:
-                
+
                 break;
             case 5:
                 removeElementOnFinal(&objeto);
                 break;
             case 6:
-                
+
                 break;
             case 7:
-                
+
                 break;
             case 8:
-                
+
                 break;
             case 9:
-                
+
                 break;
             case 10:
                 showAllElements(&objeto);
